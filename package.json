@@ -1,0 +1,16 @@
+{
+  "name": "angular-spa-webpack-es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/haukurmar/angular-spa-webpack-es6.git"
+  },
+  "author": "Haukur Mar Bodvarsson <haukurmar@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/haukurmar/angular-spa-webpack-es6#readme"
+}
