@@ -14,7 +14,7 @@ var config = {
 	// output is for DEVELOPMENT
 	output: {
 		path: path.join(__dirname, 'dist/'),
-		publicPath: '/public/',
+		//publicPath: '/public/',
 		filename: '[name].js' // based on the entry point key name
 	},
 	module: {
@@ -74,7 +74,7 @@ if (process.env.NODE_ENV === 'production') {
 	config.output.path = __dirname + '/dist';
 
 	// Uglify JS
-	//config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+	config.plugins.push(new webpack.optimize.UglifyJsPlugin());
 
 	// Generate Source map files
 	config.devtool = 'source-map';
