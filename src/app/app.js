@@ -1,5 +1,7 @@
 'use strict';
 
+import '../assets/less/app.less';
+
 angular.module('app', []);
 
 /**

@@ -1,6 +1,7 @@
 'use strict';
 var webpack = require('webpack');
 var path = require('path');
+var autoprefixer = require('autoprefixer');
 var APP = path.join(__dirname + '/src');
 // http://webpack.github.io/docs/stylesheets.html
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -21,11 +22,18 @@ var config = {
 		loaders: [
 			{
 				test: /\.less$/,
-				loader: 'css!less'
+				loader: ExtractTextPlugin.extract(
+						'style-loader',
+						'css-loader!postcss-loader!less-loader'
+				),
+				exclude: /node_modules/
 			},
 			{
 				test: /\.css$/,
-				loader: "style!css"
+				loader: ExtractTextPlugin.extract(
+						'style-loader',
+						'css-loader!postcss-loader'
+				)
 			},
 			{
 				test: /\.js$/,
@@ -46,6 +54,12 @@ var config = {
 			}
 		]
 	},
+	postcss: function () {
+		return {
+			defaults: [autoprefixer],
+			cleaner:  [autoprefixer({ browsers:["last 15 version"], cascade: true })]
+		};
+	},
 	resolve: {
 		root: APP
 	},
@@ -55,7 +69,8 @@ var config = {
 			MODE: {
 				production: process.env.NODE_ENV === 'production'
 			}
-		})
+		}),
+		new ExtractTextPlugin('[name].css')
 	],
 	// you can now require('file') instead of require('file.js')
 	extensions: ['', '.js', '.json', '.html'],

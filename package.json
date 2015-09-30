@@ -13,13 +13,13 @@
   },
   "author": "Haukur Mar Bodvarsson <haukurmar@gmail.com>",
   "license": "ISC",
-"homepage": "https://github.com/haukurmar/angular-spa-webpack-es6#readme",
+  "homepage": "https://github.com/haukurmar/angular-spa-webpack-es6#readme",
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
+    "autoprefixer": "^6.0.3",
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
     "babel-loader": "^5.3.2",
-    "css-loader": "^0.19.0",
+    "css-loader": "^0.18.0",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "image-webpack-loader": "^1.6.1",
@@ -28,6 +28,7 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
     "ng-annotate-loader": "0.0.10",
+    "postcss-loader": "^0.6.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.4.3",
     "style-loader": "^0.12.4",
@@ -35,6 +36,7 @@
     "webpack-dev-server": "^1.12.0"
   },
   "dependencies": {
-    "angular": "^1.4.6"
+    "angular": "^1.4.6",
+    "angular-new-router": "^0.5.3"
   }
 }
