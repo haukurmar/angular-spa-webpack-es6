@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/.bin/webpack-dev-server --content-base src/app --hot",
-    "build": "rimraf ./dist && NODE_ENV=production node node_modules/.bin/webpack && cp ./src/app/index.html ./dist/index.html"
+    "build": "rimraf ./dist && NODE_ENV=production node node_modules/.bin/webpack --colors --progress --bail && cp ./src/app/index.html ./dist/index.html"
   },
   "repository": {
     "type": "git",
