@@ -1,14 +1,14 @@
 'use strict';
-
 import '../assets/less/app.less';
 
-angular.module('app', []);
+let ngModule = angular.module('app', [
+
+]);
 
 /**
  * Main Controller
  */
-angular
-	.module('app')
+ngModule
 	.controller('MainCtrl', MainCtrl);
 
 /* @ngInject */
@@ -36,3 +36,5 @@ function MainCtrl() {
 
 	}
 }
+
+export default ngModule.name;
