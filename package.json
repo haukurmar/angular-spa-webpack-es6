@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "angular": "^1.4.6",
-    "angular-new-router": "^0.5.3"
+    "angular-new-router": "^0.5.3",
+    "font-awesome-webpack": "0.0.4"
   }
 }

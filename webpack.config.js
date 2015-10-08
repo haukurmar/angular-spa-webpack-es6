@@ -10,7 +10,7 @@ var config = {
 	context: APP, // set the `app` directory as the context
 	entry: {
 		app: ['webpack/hot/dev-server', './app/app.js'],
-		vendors: ['angular', 'angular-new-router']
+		vendors: ['angular', 'angular-new-router', './app/vendors.js']
 	},
 	// output is for DEVELOPMENT
 	output: {
@@ -42,7 +42,7 @@ var config = {
 			},
 			{
 				test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
-				loader: 'file-loader?name=res/[name].[ext]?[hash]'
+				loader: 'url-loader?name=res/[name].[ext]?[hash]'
 			},
 			{
 				test: /\.html/,
