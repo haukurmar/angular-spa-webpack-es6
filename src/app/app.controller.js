@@ -2,8 +2,9 @@
 
 class MainController {
 	constructor() {
+		'ngInject';
 		this.data = [];
-		this.title = "Main controller";
+		this.title = 'Main controller';
 
 		// Run
 		// ----------------------------------------------
