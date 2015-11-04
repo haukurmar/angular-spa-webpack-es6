@@ -1,24 +1,26 @@
 'use strict';
 
+// Inject dependencies
 @Inject('$timeout')
 class MainController {
 	constructor() {
 
-		console.log('$timeout', $timeout);
-		// Virkar bæði með og án this. í constructor
-		console.log('this.$timeout', this.$timeout);
 		this.data = [];
 		this.title = 'Main controller';
 
 		// Run
 		// ----------------------------------------------
 		this.activate();
+
+		// Dependencies work both with or without this. in the constructor
+		console.log('$timeout', $timeout);
+		console.log('this.$timeout', this.$timeout);
 	}
 
 	// Class methods
 	// --------------------------------------------------
 	activate() {
-		console.log('Main controller', this.$timeout);
+		console.log('Main controller');
 	}
 
 	someFunction() {
