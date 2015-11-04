@@ -1,8 +1,12 @@
 'use strict';
 
+@Inject('$timeout')
 class MainController {
 	constructor() {
-		'ngInject';
+
+		console.log('$timeout', $timeout);
+		// Virkar bæði með og án this. í constructor
+		console.log('this.$timeout', this.$timeout);
 		this.data = [];
 		this.title = 'Main controller';
 
@@ -14,7 +18,7 @@ class MainController {
 	// Class methods
 	// --------------------------------------------------
 	activate() {
-		console.log('Main controller');
+		console.log('Main controller', this.$timeout);
 	}
 
 	someFunction() {
