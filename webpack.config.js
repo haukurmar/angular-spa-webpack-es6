@@ -37,7 +37,7 @@ var config = {
 			},
 			{
 				test: /\.js$/,
-				loader: 'babel',
+				loader: 'ng-annotate!babel',
 				exclude: /node_modules|bower_components/
 			},
 			{
