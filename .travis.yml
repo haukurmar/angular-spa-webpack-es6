@@ -7,8 +7,8 @@ branches:
 before_install:
 - npm install
 before_script:
-- git config --global user.name ${GIT_NAME}
-- git config --global user.email ${GIT_EMAIL}
+- git config --global user.name "haukurmar@gmail.com"
+- git config --global user.email "Haukur"
 - echo git remote origin
 - git remote rm origin
 - git remote add origin https://haukurmar:${GH_TOKEN}@github.com/haukurmar/angular-spa-webpack-es6.git
