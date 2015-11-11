@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/haukurmar/angular-spa-webpack-es6.svg?branch=master)](https://travis-ci.org/haukurmar/angular-spa-webpack-es6)
+
 # Angular SPA using Webpack with some ES6 features
 
 This is a sandbox project to get familiar with and use best practices when it comes to Angular, Webpack and ES6.
