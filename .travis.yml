@@ -7,6 +7,12 @@ branches:
 before_install:
 - npm install
 before_script:
+- echo git config --global user.name
+- echo git config --global user.email
+
+- echo git config --global user.name ${GIT_NAME}
+- echo git config --global user.email ${GIT_EMAIL}
+
 - git config --global user.name ${GIT_NAME}
 - git config --global user.email ${GIT_EMAIL}
 - echo git remote origin
