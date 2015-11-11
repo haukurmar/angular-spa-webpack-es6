@@ -7,25 +7,19 @@ branches:
 before_install:
 - npm install
 before_script:
-- echo git config --global user.name
-- echo git config --global user.email
-
-- echo git config --global user.name ${GIT_NAME}
-- echo git config --global user.email ${GIT_EMAIL}
-
-- git config --global user.name ${GIT_NAME}
-- git config --global user.email ${GIT_EMAIL}
-- echo git remote origin
-- git remote rm origin
-- git remote add origin https://haukurmar:${GH_TOKEN}@github.com/haukurmar/angular-spa-webpack-es6.git
+#- git config --global user.name ${GIT_NAME}
+#- git config --global user.email ${GIT_EMAIL}
+#- echo git remote origin
+#- git remote rm origin
+#- git remote add origin https://haukurmar:${GH_TOKEN}@github.com/haukurmar/angular-spa-webpack-es6.git
 
 script:
 - npm run build
 
 after_success:
 - ls
-- git commit -am "Travis Dist build (#${TRAVIS_BUILD_NUMBER})"
-- git push origin HEAD:master
+#- git commit -am "Travis Dist build (#${TRAVIS_BUILD_NUMBER})"
+#- git push origin HEAD:master
 
 env:
   global:
